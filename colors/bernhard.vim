@@ -14,6 +14,7 @@ let s:colors.navy        = ['#00005f', 21]
 let s:colors.apache      = ['#ff5f5f', 203]
 let s:colors.white       = ['#ffffff', 231]
 let s:colors.orchid      = ['#d75fd7', 170]
+let s:colors.pink      = ['#d7005f', 161]
 
 " Highlighting function
 " Cribbed from badwolf, guvbox.
@@ -51,21 +52,25 @@ function! s:setLight()
   call s:highlight('identifier', 'darkgrey', 'white')
   call s:highlight('statement', 'black', '', 'bold')
   call s:highlight('define', 'darkgrey')
-  call s:highlight('preproc', 'skyblue')
+  call s:highlight('preproc', 'orchid')
   call s:highlight('type', 'apache')
   call s:highlight('special', 'black', '', 'bold')
   call s:highlight('Underlined', 'darkgrey')
   call s:highlight('label', 'darkgrey')
-  call s:highlight('operator', 'navy')
+  call s:highlight('operator', 'pink')
   call s:highlight('delimiter', 'darkgrey')
   
   " Inline notifications. 
   call s:highlight('Todo', 'orchid', 'white', 'bold')
-  call s:highlight('Cursor', 'darkgrey')
   call s:highlight('Search', 'white', 'apache')
   call s:highlight('IncSearch', 'white', 'apache')
   call s:highlight('title', 'darkgrey')
-  
+ 
+  " CursorLine
+  call s:highlight('Cursor', 'darkgrey')
+  call s:highlight('CursorLine', '', '', 'NONE')
+  call s:highlight('CursorLineNr', 'apache')
+
   " Status line
   call s:highlight('StatusLine', 'black', 'white')
   call s:highlight('StatusLineNC', 'white', 'black')
