@@ -72,8 +72,8 @@ function! s:setLight()
   call s:highlight('CursorLineNr', 'apache')
 
   " Status line
-  call s:highlight('StatusLine', 'black', 'white')
-  call s:highlight('StatusLineNC', 'white', 'black')
+  call s:highlight('StatusLine', 'apache', 'white')
+  call s:highlight('StatusLineNC', 'black', 'white')
   
   " Windows
   call s:highlight('VertSplit', 'black')
