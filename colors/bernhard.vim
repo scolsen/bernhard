@@ -14,7 +14,7 @@ let s:colors.navy        = ['#00005f', 21]
 let s:colors.apache      = ['#ff5f5f', 203]
 let s:colors.white       = ['#ffffff', 231]
 let s:colors.orchid      = ['#d75fd7', 170]
-let s:colors.pink      = ['#d7005f', 161]
+let s:colors.pink        = ['#d7005f', 161]
 
 " Highlighting function
 " Cribbed from badwolf, guvbox.
@@ -76,7 +76,7 @@ function! s:setLight()
   call s:highlight('StatusLineNC', 'white', 'black')
   
   " Windows
-  call s:highlight('VertSplit', 'white')
+  call s:highlight('VertSplit', 'black')
 
   " Diff 
   call s:highlight('DiffChange', 'darkgrey')
