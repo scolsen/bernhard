@@ -14,10 +14,11 @@ let s:colors.navy        = ['#00005f', 21]
 let s:colors.apache      = ['#ff5f5f', 203]
 let s:colors.white       = ['#ffffff', 231]
 let s:colors.orchid      = ['#d75fd7', 170]
+let s:colors.darkorchid  = ['#af5faf', 133]
 let s:colors.pink        = ['#d7005f', 161]
 
 " Highlighting function
-" Cribbed from badwolf, guvbox.
+" Cribbed from badwolf, gruvbox.
 function! s:highlight(target, fg, ...)
   " ... = bg, style.
   let histring = 'hi ' . a:target . ' '
@@ -52,7 +53,7 @@ function! s:setLight()
   call s:highlight('identifier', 'darkgrey', 'white')
   call s:highlight('statement', 'black', '', 'bold')
   call s:highlight('define', 'darkgrey')
-  call s:highlight('preproc', 'orchid')
+  call s:highlight('preproc', 'darkorchid')
   call s:highlight('type', 'apache')
   call s:highlight('special', 'black', '', 'bold')
   call s:highlight('Underlined', 'darkgrey')
