@@ -5,17 +5,14 @@ let g:colors_name = "bernhard"
 
 " Color definitions.
 let s:colors.black       = ['#000000', 000] 
-let s:colors.densegrey   = ['#121212', 233]
 let s:colors.deepgrey    = ['#1c1c1c', 234]
 let s:colors.darkgrey    = ['#262626', 235]
 let s:colors.grey        = ['#949494', 246]
-let s:colors.skyblue     = ['#87afff', 68]
-let s:colors.navy        = ['#00005f', 21]
-let s:colors.apache      = ['#ff5f5f', 203]
 let s:colors.white       = ['#ffffff', 231]
 let s:colors.orchid      = ['#d75fd7', 170]
-let s:colors.darkorchid  = ['#af5faf', 133]
+let s:colors.darkorchid  = ['#af5faf', 90]
 let s:colors.pink        = ['#d7005f', 161]
+let s:colors.crimson     = ['#b22c40', 124]
 
 " Highlighting function
 " Cribbed from badwolf, gruvbox.
@@ -47,14 +44,14 @@ function! s:setLight()
   " Base colors.
   call s:highlight('Normal', 'black', 'white')
   call s:highlight('NonText', 'darkgrey')
-  call s:highlight('comment', 'orchid')
-  call s:highlight('constant', 'apache', 'white', 'bold')
+  call s:highlight('comment', 'darkorchid')
+  call s:highlight('constant', 'crimson', 'white', 'bold')
   call s:highlight('string', 'grey')
   call s:highlight('identifier', 'darkgrey', 'white')
   call s:highlight('statement', 'black', '', 'bold')
   call s:highlight('define', 'darkgrey')
-  call s:highlight('preproc', 'darkorchid')
-  call s:highlight('type', 'apache')
+  call s:highlight('preproc', 'darkorchid', '', 'bold')
+  call s:highlight('type', 'crimson')
   call s:highlight('special', 'black', '', 'bold')
   call s:highlight('Underlined', 'darkgrey')
   call s:highlight('label', 'darkgrey')
@@ -63,27 +60,27 @@ function! s:setLight()
   
   " Inline notifications. 
   call s:highlight('Todo', 'orchid', 'white', 'bold')
-  call s:highlight('Search', 'white', 'apache')
-  call s:highlight('IncSearch', 'white', 'apache')
+  call s:highlight('Search', 'white', 'crimson')
+  call s:highlight('IncSearch', 'white', 'crimson')
   call s:highlight('title', 'darkgrey')
  
   " CursorLine
   call s:highlight('Cursor', 'darkgrey')
   call s:highlight('CursorLine', '', '', 'NONE')
-  call s:highlight('CursorLineNr', 'apache')
+  call s:highlight('CursorLineNr', 'crimson')
 
   " Status line
-  call s:highlight('StatusLine', 'apache', 'white')
+  call s:highlight('StatusLine', 'crimson', 'white')
   call s:highlight('StatusLineNC', 'black', 'white')
   
   " Windows
   call s:highlight('VertSplit', 'black')
 
   " Diff 
-  call s:highlight('DiffChange', 'darkgrey')
-  call s:highlight('DiffText', 'darkgrey')
-  call s:highlight('DiffAdd', 'darkgrey')
-  call s:highlight('DiffDelete', 'darkgrey')
+  call s:highlight('DiffChange', 'pink', 'white')
+  call s:highlight('DiffText', 'black', 'white')
+  call s:highlight('DiffAdd', 'darkorchid', 'white')
+  call s:highlight('DiffDelete', 'crimson', 'white')
 
   " Folds
   call s:highlight('Folded', 'darkgrey')
@@ -94,14 +91,14 @@ function! s:setLight()
   
   " Sign Column
   call s:highlight('LineNr', 'black', 'white')
-  call s:highlight('SignColumn', 'skyblue', 'white')
+  call s:highlight('SignColumn', 'crimson', 'white')
 
   " Command window
-  call s:highlight('ErrorMsg', 'apache')
-  call s:highlight('WarningMsg', 'apache')
-  call s:highlight('ModeMsg', 'deepgrey')
-  call s:highlight('MoreMsg', 'darkgrey')
-  call s:highlight('Error', 'apache')
+  call s:highlight('ErrorMsg', 'crimson', 'white')
+  call s:highlight('WarningMsg', 'crimson', 'white')
+  call s:highlight('ModeMsg', 'deepgrey', 'white')
+  call s:highlight('MoreMsg', 'darkgrey', 'white')
+  call s:highlight('Error', 'crimson', 'white')
 
   " Spelling
   call s:highlight('SpellLocal', '', 'white', 'italic')
@@ -109,16 +106,16 @@ function! s:setLight()
   call s:highlight('SpellCap', '', 'white', 'underline')
 
   " Markdown
-  call s:highlight('markdownLinkText', 'apache', '', 'underline')
-  call s:highlight('markdownHeadingDelimiter', 'apache')
-  call s:highlight('markdownListMarker', 'apache')
-  call s:highlight('markdownCodeDelimiter', 'orchid')
-  call s:highlight('markdownH1', 'apache', '', 'bold')
-  call s:highlight('markdownH2', 'apache', '', 'bold')
-  call s:highlight('markdownH3', 'apache', '', 'bold')
-  call s:highlight('markdownH4', 'apache', '', 'bold')
-  call s:highlight('markdownH5', 'apache', '', 'bold')
-  call s:highlight('markdownH6', 'apache', '', 'bold')
+  call s:highlight('markdownLinkText', 'crimson', '', 'underline')
+  call s:highlight('markdownHeadingDelimiter', 'crimson')
+  call s:highlight('markdownListMarker', 'crimson')
+  call s:highlight('markdownCodeDelimiter', 'darkorchid')
+  call s:highlight('markdownH1', 'crimson', '', 'bold')
+  call s:highlight('markdownH2', 'crimson', '', 'bold')
+  call s:highlight('markdownH3', 'crimson', '', 'bold')
+  call s:highlight('markdownH4', 'crimson', '', 'bold')
+  call s:highlight('markdownH5', 'crimson', '', 'bold')
+  call s:highlight('markdownH6', 'crimson', '', 'bold')
 
 endfunction
 
